@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 269399696997935408}
   - component: {fileID: 269399696997935415}
   - component: {fileID: 269399696997935409}
-  - component: {fileID: 1386874653284191896}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -67,18 +66,3 @@ MonoBehaviour:
   defaultAfterBattleMusic: {fileID: 0}
   defaultBattleMusic: {fileID: 8300000, guid: c5246111d16d4b34bb57ed768e5a2b8d, type: 3}
   musicFadeDuration: 5
---- !u!114 &1386874653284191896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269399696997935414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd78ad8e80043e41936594ac68c3372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 7ef1e3ddd43fbb64993c72aaa13ad401, type: 3}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
