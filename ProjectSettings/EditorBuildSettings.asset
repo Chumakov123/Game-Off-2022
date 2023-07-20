@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Scenes/Preloader.unity
+    guid: 550722bd18057c94698c84bf1ad93f9b
+  - enabled: 1
     path: Assets/Game/Scenes/MenuScene.unity
     guid: c21181aafb5ebbc4a9c4bb5daeca74bc
   - enabled: 1
@@ -20,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Game/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/Forest.unity
     guid: b5270ab37a125564a9b153dc9e3eb929
   - enabled: 0
@@ -32,4 +35,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Game/Scenes/TilemapTest.unity
     guid: a8c664eb2d74fcb4db46c5cde6d7cd8d
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Game/Scenes/ForestMobile.unity
+    guid: ed31b1c15716a7d44838c94abe6a99b8
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 5c4fac554b8ef584aac1860d7eff26eb, type: 2}

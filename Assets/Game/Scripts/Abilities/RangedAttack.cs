@@ -7,6 +7,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.IK;
+using UnityEngine.EventSystems;
 
 public class RangedAttack : CharacterAbility
 {
@@ -190,7 +191,14 @@ public class RangedAttack : CharacterAbility
         {
             if (UseCursorToAimBallistic)
             {
-                SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+                if (Mouse.current != null)
+                {
+                    SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+                }
+                else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed && !EventSystem.current.IsPointerOverGameObject())
+                {
+                    SetTargetPos(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()));
+                }
             }
             
             proj.SetAngleToPosition(curTargetPos,useDirectFire);
@@ -262,7 +270,14 @@ public class RangedAttack : CharacterAbility
             Debug.Log("Aim");
             if (UseCursorToAimBallistic && owner.IsPlayer)
             {
-                SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+                if (Mouse.current != null)
+                {
+                    SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
+                }
+                else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed && !EventSystem.current.IsPointerOverGameObject())
+                {
+                    SetTargetPos(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()));
+                }
             }
             float angle;
             var p = projectile.GetComponent<Projectile>();

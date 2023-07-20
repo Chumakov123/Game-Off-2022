@@ -38,7 +38,7 @@ public class SkipCutscene : MonoBehaviour
     void Update()
     {
         //Пропуск катсцены по нажатию клавиши Enter
-        if (!skipped&&Input.GetKeyDown(KeyCode.Return))
+        if (!skipped&&Input.anyKeyDown)
         {
             skipped=true;
             skipTime=director.time;
