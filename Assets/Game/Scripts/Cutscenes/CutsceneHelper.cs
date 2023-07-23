@@ -24,7 +24,10 @@ public class CutsceneHelper : MonoBehaviour
     }
     public void SetPlayerInput(bool isActive)
     {
-        Character.player.GetComponent<PlayerInput>().enabled = isActive;
+        //Character.player.gameObject.GetComponent<CharacterControl>().Move(new UnityEngine.InputSystem.InputAction.CallbackContext());
+        //var input = InputManager.instance.gameObject.GetComponent<PlayerInput>();
+        //input.;
+        //input.enabled = isActive;
     }
     public void SetCameraZoomSmooth(float zoom)
     {

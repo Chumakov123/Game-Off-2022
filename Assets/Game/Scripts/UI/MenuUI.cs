@@ -9,7 +9,7 @@ public class MenuUI : MonoBehaviour
     public SettingsUI settingsUI;
     public void ButtonStart()
     {
-        SceneLoader.Instance.LoadScene("Loading","ForestMobile");
+        SceneLoader.Instance.LoadScene("Loading","ForestMobileFull");
         //SceneManager.LoadScene("Forest");
     }
     public void ButtonContinue()

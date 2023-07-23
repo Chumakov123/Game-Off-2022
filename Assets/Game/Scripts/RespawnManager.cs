@@ -10,6 +10,7 @@ public class RespawnManager : MonoBehaviour
 {
     public UnityEvent OnRespawn;
 
+    [SerializeField] Secondclasshero playerInput;
     [SerializeField] Vector3 spawnPoint;
     [SerializeField] GameObject playerPref;
     [HideInInspector] public Overlay owner;
@@ -25,6 +26,7 @@ public class RespawnManager : MonoBehaviour
     bool canRespawn = false;
     public void Initialize()
     {
+        //playerInput = new Secondclasshero();
         fixedDeltaTimeDefault = Time.fixedDeltaTime;
         escMenu.OnCryCravenButtonPressed.AddListener(CryCraven);
         owner.player?.OnDead.AddListener(OnPlayerDead);
@@ -61,6 +63,7 @@ public class RespawnManager : MonoBehaviour
         {
             canRespawn = false;
             owner.player = Instantiate(playerPref, spawnPoint,new Quaternion(0,0,0,0)).GetComponent<Character>();
+            InputManager.instance.UpdateControl(owner.player.gameObject.GetComponent<CharacterControl>());
             owner.player.gameObject.name = "Player";
             owner.player.OnDead.AddListener(OnPlayerDead);
             healthBar.SetOwner(owner.player);

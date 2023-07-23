@@ -1,33 +1,34 @@
 using MoreMountains.Tools;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Overlay : MonoBehaviour
 {
     [HideInInspector] public Character player;
-    PauseGame pauseGame;
-    RespawnManager respawnManager;
+    PauseGame _pauseGame;
+    RespawnManager _respawnManager;
     public BloodScreen bloodScreen;
     public BoltsCounter boltsCounter;
 
-    private void Awake()
+    private void Start()
     {
-        respawnManager = GetComponent<RespawnManager>();
-        pauseGame = GetComponent<PauseGame>();
-        respawnManager.owner = this;
-        pauseGame.owner = this;
+        _respawnManager = GetComponent<RespawnManager>();
+        _pauseGame = GetComponent<PauseGame>();
+        _respawnManager.owner = this;
+        _pauseGame.owner = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character>();
-        pauseGame.Initialize();
-        respawnManager.Initialize();
+        _pauseGame.Initialize();
+        _respawnManager.Initialize();
         bloodScreen.SetOwner(player);
         boltsCounter.SetOwner(player);
-        pauseGame.playerInput = player.GetComponent<PlayerInput>();
+        _pauseGame.playerInput = player.GetComponent<PlayerInput>();
         var bars = GetComponentsInChildren<PropertyProgressBar>();
         foreach (var x in bars)
         {
             x.SetOwner(player);
         }
+        InputManager.instance.UpdateControl(player.gameObject.GetComponent<CharacterControl>());
+        InputManager.instance.SubscribePause(_pauseGame);
+        InputManager.instance.SubscribeRespawn(_respawnManager);
     }
 }

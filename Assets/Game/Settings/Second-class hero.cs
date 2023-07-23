@@ -102,7 +102,7 @@ public partial class @Secondclasshero : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
-                    ""id"": ""4d4e2813-0491-49d7-a0a5-347eb0a66c10"",
+                    ""id"": ""a445f234-7776-47cd-81cb-39e05c61f2a4"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -111,7 +111,7 @@ public partial class @Secondclasshero : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Respawn"",
                     ""type"": ""Button"",
-                    ""id"": ""bc4ea56e-513f-4a7c-a5a6-3f00d63123a7"",
+                    ""id"": ""6ae8f0fe-b8b4-4ad3-8edf-9fce7140e64b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -528,7 +528,7 @@ public partial class @Secondclasshero : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e01333fe-6ad5-40f4-9200-bf9634e6c191"",
+                    ""id"": ""8bc14731-249b-44f7-bad2-2592645d5232"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -539,7 +539,7 @@ public partial class @Secondclasshero : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""bd3505e7-e73d-48e3-b506-825b9467bbf1"",
+                    ""id"": ""9c163b58-46ff-42ef-9359-d908ef14cf74"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -550,7 +550,7 @@ public partial class @Secondclasshero : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""eae2622c-0da0-4992-b921-1352e592fa8e"",
+                    ""id"": ""5fbe6aeb-8d21-47fc-b209-e89cf9962fcd"",
                     ""path"": ""<Touchscreen>/primaryTouch/tap"",
                     ""interactions"": """",
                     ""processors"": """",

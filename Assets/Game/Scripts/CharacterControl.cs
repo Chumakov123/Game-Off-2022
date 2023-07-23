@@ -21,6 +21,7 @@ public class CharacterControl : MonoBehaviour
     private ShieldBlock _shieldBlock;
     private ReloadAbility _reloadAbility;
     private AbilityFly _abilityFly;
+
     private void Awake()
     {
         _character = GetComponent<Character>();
