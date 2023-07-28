@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8943639032822453128
 Transform:
@@ -106,12 +106,16 @@ MonoBehaviour:
     m_Bits: 256
   startEffects:
   - {fileID: 11400000, guid: 33e7cd555f47ca349ad22e1bbae14f32, type: 2}
+  startThroughShieldEffects: []
   knockBack: {x: 0, y: 0}
   useAutoDisable: 0
   autoDisableTime: 0
   ignoreOwnerCollision: 0
   knockbackDirDefinition: 0
   repeatedEffectApplicationTime: 1
+  hitDamageableFeedback: {fileID: 0}
+  hitNonDamageableFeedback: {fileID: 0}
+  hitShieldFeedback: {fileID: 0}
 --- !u!61 &8943639032822453133
 BoxCollider2D:
   m_ObjectHideFlags: 0

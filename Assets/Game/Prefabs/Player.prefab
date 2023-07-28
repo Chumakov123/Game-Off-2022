@@ -3594,7 +3594,7 @@ MonoBehaviour:
   minAttackPreparingTime: 0.2
   maxAttackPreparingTime: 0.6
   delayBeforeAttacking: 0.25
-  activeDamageZoneTime: 0.05
+  activeDamageZoneTime: 0.1
   delayAfterAttack: 0.3
   timeBetweenAttacks: 0
   baseDamage: 3
