@@ -374,6 +374,7 @@ MonoBehaviour:
   flyGravityScale: 0
   flyAnimParameter: Flying
   damageZone: {fileID: 5857220962187737042}
+  flyFeedback: {fileID: 0}
 --- !u!114 &2211871874243782729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitializationMode: 0
   Label: TurnToTarget
+  defaultRight: 0
 --- !u!114 &9123021093433241962
 MonoBehaviour:
   m_ObjectHideFlags: 0

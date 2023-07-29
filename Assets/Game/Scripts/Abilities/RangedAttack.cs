@@ -177,7 +177,14 @@ public class RangedAttack : CharacterAbility
         
         owner.AttackingState.ChangeState(CharacterAttackingState.Idle);
     }
-
+    private bool IsTouchOverUI(Vector2 touchPosition)
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = touchPosition;
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
+    }
     protected void SpawnProjectile()
     {
         ///Добавляем offset если не надо рассчитывать точный угол
@@ -195,9 +202,15 @@ public class RangedAttack : CharacterAbility
                 {
                     SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
                 }
-                else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed && !EventSystem.current.IsPointerOverGameObject())
+                else if (Touchscreen.current != null)
                 {
-                    SetTargetPos(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()));
+                    foreach (var touch in Input.touches)
+                    {
+                        if (touch.phase == UnityEngine.TouchPhase.Began && !IsTouchOverUI(touch.position))
+                        {
+                            SetTargetPos(Camera.main.ScreenToWorldPoint(touch.position));
+                        }
+                    }
                 }
             }
             
@@ -274,9 +287,15 @@ public class RangedAttack : CharacterAbility
                 {
                     SetTargetPos(Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()));
                 }
-                else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed && !EventSystem.current.IsPointerOverGameObject())
+                else if (Touchscreen.current != null)
                 {
-                    SetTargetPos(Camera.main.ScreenToWorldPoint(Touchscreen.current.primaryTouch.position.ReadValue()));
+                    foreach (var touch in Input.touches)
+                    {
+                        if (touch.phase == UnityEngine.TouchPhase.Began && !IsTouchOverUI(touch.position))
+                        {
+                            SetTargetPos(Camera.main.ScreenToWorldPoint(touch.position));
+                        }
+                    }
                 }
             }
             float angle;

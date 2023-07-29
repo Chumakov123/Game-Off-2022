@@ -113,7 +113,7 @@ public class AbilityGetDown : CharacterAbility
     {
         return !started && owner.IsOnGround && owner.MovementState.CurrentState != CharacterMovementsStates.Jumping
                                 && owner.MovementState.CurrentState != CharacterMovementsStates.Dashing
-            && !owner.IsTired && (owner.StayOnPlatform || owner.StayOnStairway) && curMoveInputDir.y < 0;
+            && !owner.IsTired && (owner.StayOnPlatform || owner.StayOnStairway) && curMoveInputDir.y < -0.3;
     }
 
     public void ProcessInput(bool input)

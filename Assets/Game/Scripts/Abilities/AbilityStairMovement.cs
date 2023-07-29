@@ -33,7 +33,7 @@ public class AbilityStairMovement : CharacterAbility
                     false);
             }*/
 
-            if (!(owner.StayOnPlatform || owner.StayOnGround) || curMoveInputDir.y > 0)
+            if (!(owner.StayOnPlatform || owner.StayOnGround) || curMoveInputDir.y > 0.4)
             {
                 Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Stairway"),
                     false);
@@ -48,7 +48,7 @@ public class AbilityStairMovement : CharacterAbility
                 }
             }
 
-            if (owner.StayOnStairway && curMoveInputDir.y < 0)
+            if (owner.StayOnStairway && curMoveInputDir.y < -0.4)
             {
                 Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"),
                     true);

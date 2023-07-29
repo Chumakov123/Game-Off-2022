@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6a85620cd454e4a83609eb397ad06a, type: 3}
   m_Name: New Camera Params
   m_EditorClassIdentifier: 
-  OrthoSizeDefault: 10
-  OrthoSizeOnDead: 6
+  OrthoSizeDefault: 7.5
+  OrthoSizeOnDead: 5
